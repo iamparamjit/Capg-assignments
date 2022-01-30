@@ -1,0 +1,49 @@
+db.users.insert([{username : "GoodGuyGreg",
+first_name : "Good Guy",
+last_name : "Greg"},
+{username : "ScumbagSteve",
+full_name :{first : "Scumbag",last : "Steve"}
+}])
+
+----------------------------------------------------
+db.posts.insertMany([{username : "GoodGuyGreg",
+title : "Passes out at party",
+body : "Wakes up early and cleans house"},
+{username : "GoodGuyGreg",
+title : "Steals your identity",
+body : "Raises your credit score"},
+{username : "GoodGuyGreg",
+title : "Reports a bug in your code",
+body : "Sends you a Pull Request"},
+{username : "ScumbagSteve",
+title : "Borrows something",
+body : "Sells it"},
+{username : "ScumbagSteve",
+title : "Borrows everything",
+body : "The end"},
+{username : "ScumbagSteve",
+title : "Forks your repo on github",
+body : "Sets to private"}
+])
+
+--------------------------------------------------
+
+db.comments.insertMany([{username : "GoodGuyGreg",
+comment : "Hope you got a good deal!",
+post : ObjectId('61efc93e3f70bf3ad50fded4')},
+
+{username : "GoodGuyGreg",
+comment : "What's mine is yours!",
+post : ObjectId('61efc93e3f70bf3ad50fded5')},
+
+{username : "GoodGuyGreg",
+comment : "Don't violate the licensing agreement!",
+post : ObjectId('61efc93e3f70bf3ad50fded6')},
+
+{username : "ScumbagSteve",
+comment : "It still isn't clean",
+post : ObjectId('61efc93e3f70bf3ad50fded1')},
+
+{username : "ScumbagSteve",
+comment : "Denied your PR cause I found a hack",
+post : ObjectId('61efc93e3f70bf3ad50fded3')}])

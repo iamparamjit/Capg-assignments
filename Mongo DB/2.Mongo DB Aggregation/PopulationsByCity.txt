@@ -1,0 +1,30 @@
+db.zipcodes.aggregate([
+  {$group:{_id:"$city",cPop:{$sum:"$pop"}}}
+  ])
+
+----------------------------------------------------------
+
+db.zipcodes.aggregate([
+  {$group:{_id:"$city",cPop:{$sum:"$pop"}}},
+  {$sort:{cPop:-1}}
+  ])
+
+---------------------------------------------------------------
+
+db.zipcodes.aggregate([
+  {$group:{_id:"$city",cPop:{$sum:"$pop"}}},
+  {$sort:{cPop:-1}},
+  {$limit:3}
+  ])
+
+-----------------------------------------------------
+
+db.zipcodes.aggregate([
+  {$match:{state:"TX"}},
+  {$group:{_id:"$city",cPop:{$sum:"$pop"}}},
+  
+  {$sort:{cPop:-1}},
+  {$limit:3}
+  ])
+
+---------------------------------------------

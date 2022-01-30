@@ -1,0 +1,39 @@
+use population
+-------------------------------------------
+
+db.zipcodes.find({$and:[{city:"ATLANTA"},{state:"GA"}]})
+
+-----------------------------------------------------
+
+db.zipcodes.aggregate({$match:{$and:[{city:"ATLANTA"},{state:"GA"}]}})
+
+----------------------------------------------------
+
+db.zipcodes.aggregate( [ 
+
+    { $group: { _id: {city: "$city", zipcode: "_id"}, zip: { $sum: 1 } } },
+
+    { $group: {  _id: "$_id.city", zcount: {$sum: "$zip"}} },
+
+    {$match:{_id:"ATLANTA"}}
+ ] )
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{ _id: 'ATLANTA', zcount: 41 }
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+--------------------------------------------
+
+db.zipcodes.aggregate( [
+   { $group: { _id: "$state", totalPop: { $sum: "$pop" } } },
+   { $match: { totalPop: { $gte: 10*1000*1000 } } }
+] )
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+{ _id: 'ATLANTA', totalPop: 630046 }
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+--------------------------------------------------------
+
+
