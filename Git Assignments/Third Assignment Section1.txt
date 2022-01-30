@@ -1,0 +1,39 @@
+
+
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git remote
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git remote -v
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git remote add oorigin https://github.com/iamparamjit/freshersbatch-oct16.git
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git remote -v
+oorigin https://github.com/iamparamjit/freshersbatch-oct16.git (fetch)
+oorigin https://github.com/iamparamjit/freshersbatch-oct16.git (push)
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git remote rename oorigin origin
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git remote -v
+origin  https://github.com/iamparamjit/freshersbatch-oct16.git (fetch)
+origin  https://github.com/iamparamjit/freshersbatch-oct16.git (push)
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git push origin master
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (34/34), 3.25 KiB | 255.00 KiB/s, done.
+Total 34 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/iamparamjit/freshersbatch-oct16.git
+ * [new branch]      master -> master
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$

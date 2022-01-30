@@ -1,0 +1,218 @@
+
+Hp@Paramjit MINGW64 ~
+$ mkdir Assignments
+
+Hp@Paramjit MINGW64 ~
+$ cd Assignments
+
+Hp@Paramjit MINGW64 ~/Assignments
+$ touch README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments
+$ vi README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments
+$ git commit -a -m "commiting readme text file"
+fatal: not a git repository (or any of the parent directories): .git
+
+Hp@Paramjit MINGW64 ~/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/Hp/Assignments/.git/
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit -a -m "commiting readme text file"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git add README.txt
+warning: LF will be replaced by CRLF in README.txt.
+The file will have its original line endings in your working directory
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit README.txt "commiting readme text file"
+error: pathspec 'commiting readme text file' did not match any file(s) known to
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ touch README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ vi README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit -a -m "commiting readme file"
+warning: LF will be replaced by CRLF in README.txt.
+The file will have its original line endings in your working directory
+[master (root-commit) f2fa4fb] commiting readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git branch html-assignments
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git commit -a -m "commiting html assignments"
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        htmlfiles.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "commiting html assignments"
+[html-assignments a2173ad] commiting html assignments
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 htmlfiles.html
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ vi htmlfiles.html
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git add .
+warning: LF will be replaced by CRLF in htmlfiles.html.
+The file will have its original line endings in your working directory
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   htmlfiles.html
+
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "commiting at step30"
+[html-assignments 7bb6949] commiting at step30
+ 1 file changed, 1 insertion(+)
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ touch README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ ls
+README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ vi README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git add .
+warning: LF will be replaced by CRLF in README.txt.
+The file will have its original line endings in your working directory
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.txt
+
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit -m "commiting at step32"
+[master 5145836] commiting at step32
+ 1 file changed, 1 insertion(+)
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ ls
+README.txt  htmlfiles.html
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ vi htmlfiles.html
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git add .
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "commiting step35"
+[html-assignments 0faecac] commiting step35
+ 1 file changed, 1 insertion(+)
+
+Hp@Paramjit MINGW64 ~/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git merge html-assignments
+Merge made by the 'ort' strategy.
+ htmlfiles.html | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 htmlfiles.html
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ ls
+README.txt  htmlfiles.html
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git --merged
+unknown option: --merged
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git branch --merged
+  html-assignments
+* master
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was 0faecac).
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git log
+commit 0e0e2faeacb8c6e51350cb2e3b4d52a3436e30ce (HEAD -> master)
+Merge: 5145836 0faecac
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Thu Jan 20 19:44:04 2022 +0530
+
+    Step37 Merge branch 'html-assignments'
+
+commit 0faecac317ec193e9fe13d2ff2500b91673445b5
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Thu Jan 20 19:41:27 2022 +0530
+
+    commiting step35
+
+commit 5145836975bcf855c429313f4ee61312f48fbb94
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Thu Jan 20 19:38:14 2022 +0530
+
+    commiting at step32
+
+commit 7bb69499bfea64d0c4db9e557ef181318ead12fe
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Thu Jan 20 19:34:43 2022 +0530
+
+:

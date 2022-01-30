@@ -1,0 +1,310 @@
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git branch js-assignments
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "commiting step4"
+[js-assignments af0b635] commiting step4
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 jsfiles.java
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ vi README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git add .
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "commiting step6
+> q
+> bash: unexpected EOF while looking for matching `"'
+bash: syntax error: unexpected end of file
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "commiting step6"
+[js-assignments 095bd51] commiting step6
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ vi README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git add .
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit -m "commiting step8"
+[master 85930cc] commiting step8
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ ls
+README.txt  cssfiles.css  htmlfiles.html  jsfiles.java
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ vi jsfiles.java
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git add .
+warning: LF will be replaced by CRLF in jsfiles.java.
+The file will have its original line endings in your working directory
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "commiting step11"
+[js-assignments 3047c37] commiting step11
+ 1 file changed, 1 insertion(+)
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git merge --abort
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git add .
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit -m "adding readme again"
+On branch master
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git add readme.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit -m "adding readme again"
+On branch master
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git commit -m "adding readme again"
+On branch master
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ ls
+README.txt  cssfiles.css  htmlfiles.html  jsfiles.java
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git add README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "adding again readme"
+On branch js-assignments
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   jsfiles.java
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.txt
+
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git commit -m "solving conflictt"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git merge --abort
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ ls
+README.txt  cssfiles.css  htmlfiles.html  jsfiles.java
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+nothing to commit, working tree clean
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ vi README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git add README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "to resolve"
+[js-assignments 91d9dd7] to resolve
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+Hp@Paramjit MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+
+
+
+
+
+
+
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ cat README.txt
+<<<<<<< HEAD
+a few lines about assignment content.Making small changes on line1 STEP5.Doingg changes on line1 step8
+step32 making minor changes
+step8 minor changing
+=======
+a few lines about assignment content.Making small changes on line1 STEP5.Doing changes onn firstline step5
+step32 maaking minor changes
+step8 minnor changing
+>>>>>>> js-assignments
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ vi README.txt
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   jsfiles.java
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.txt
+
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git add .
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   README.txt
+        new file:   jsfiles.java
+
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ giyt commit -m "coflict resolved"
+bash: giyt: command not found
+
+Hp@Paramjit MINGW64 ~/Assignments (master|MERGING)
+$ git commit -m "coflict resolved"
+[master 08df7da] coflict resolved
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Already up to date.
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git log --merge
+fatal: --merge without MERGE_HEAD?
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git branch --merged
+  js-assignments
+* master
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git branch -d js-assignments
+Deleted branch js-assignments (was 91d9dd7).
+
+Hp@Paramjit MINGW64 ~/Assignments (master)
+$ git log
+commit 08df7da252776d626a59be1841066e4931cd0a93 (HEAD -> master)
+Merge: 85930cc 91d9dd7
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Fri Jan 21 10:48:04 2022 +0530
+
+    coflict resolved
+
+commit 91d9dd7c4b72c4dd33ba0c22bc2296cde85b03be
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Thu Jan 20 21:22:57 2022 +0530
+
+    to resolve
+
+commit 3047c3743c80c434a4602d953fe7cfba09a7b873
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Thu Jan 20 20:45:41 2022 +0530
+
+    commiting step11
+
+commit 85930cce265c6510c203ded3a6e2f712bcaa40ee (origin/master)
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Thu Jan 20 20:40:07 2022 +0530

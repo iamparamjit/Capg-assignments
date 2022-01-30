@@ -1,0 +1,237 @@
+
+Hp@Paramjit MINGW64 ~
+$ mkdir project_dir
+
+Hp@Paramjit MINGW64 ~
+$ cd project_dir
+
+Hp@Paramjit MINGW64 ~/project_dir
+$ touch index.html
+
+Hp@Paramjit MINGW64 ~/project_dir
+$ git init
+Initialized empty Git repository in C:/Users/Hp/project_dir/.git/
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git add index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git commit -m "commiting index"
+[master (root-commit) b1a501b] commiting index
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ vi index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ touch info.txt
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ touch .gitignore
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ vi .gitignore
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git add .gitignore
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git commit -m "commiting gitignore"
+[master 5ef34e3] commiting gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ ^C
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git commit -m index.html
+[master a8c9ce9] index.html
+ 1 file changed, 1 insertion(+)
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git log
+commit a8c9ce98b19d266fae5d154ba8a8cd5d627c0f85 (HEAD -> master)
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Wed Jan 19 19:45:42 2022 +0530
+
+    index.html
+
+commit 5ef34e364939719d422a56851bf9b52d475bb5ea
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Wed Jan 19 19:44:03 2022 +0530
+
+    commiting gitignore
+
+commit b1a501bbfe560a4a9dbb7b183ad1cdb643568930
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Wed Jan 19 19:39:29 2022 +0530
+
+    commiting index
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ vi index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git checkout -- .
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ cat index.html
+step7
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ vi index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git add index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git restore --staged
+fatal: you must specify path(s) to restore
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git reset head
+Unstaged changes after reset:
+M       index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ alias my-add="git add"
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ my-add index.html
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ commit -m "comitting using myadd"
+bash: commit: command not found
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git commit -m "commiting using myadd"
+[master bdb4eae] commiting using myadd
+ 1 file changed, 1 insertion(+)
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git log
+commit bdb4eae2902e558d66a4d6c4059fc048ac1669cd (HEAD -> master)
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Wed Jan 19 20:06:04 2022 +0530
+
+    commiting using myadd
+
+commit a8c9ce98b19d266fae5d154ba8a8cd5d627c0f85
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Wed Jan 19 19:45:42 2022 +0530
+
+    index.html
+
+commit 5ef34e364939719d422a56851bf9b52d475bb5ea
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Wed Jan 19 19:44:03 2022 +0530
+
+    commiting gitignore
+
+commit b1a501bbfe560a4a9dbb7b183ad1cdb643568930
+Author: paramgit <paramjit.profs@gmail.com>
+Date:   Wed Jan 19 19:39:29 2022 +0530
+
+    commiting index
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ checkout bdb4eae2902e558d66a4d6c4059fc048ac1669cd
+bash: checkout: command not found
+
+Hp@Paramjit MINGW64 ~/project_dir (master)
+$ git checkout bdb4eae2902e558d66a4d6c4059fc048ac1669cd
+Note: switching to 'bdb4eae2902e558d66a4d6c4059fc048ac1669cd'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at bdb4eae commiting using myadd
+
+Hp@Paramjit MINGW64 ~/project_dir ((bdb4eae...))
+$ git checkout a8c9ce98b19d266fae5d154ba8a8cd5d627c0f85
+Previous HEAD position was bdb4eae commiting using myadd
+HEAD is now at a8c9ce9 index.html
+
+Hp@Paramjit MINGW64 ~/project_dir ((a8c9ce9...))
+$
